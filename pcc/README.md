@@ -16,6 +16,12 @@ the client over the same connection. In addition, the server maintains a data st
 counts the number of times each printable character was observed in all the connections. When
 the server receives a SIGINT, it prints these counts and exits.
 
+Server specification
+-
+
+Command line arguments:
+    • argv[1]: server’s port (assume a 16-bit unsigned integer).
+
  Client (pcc_client):
  -
 The client creates a TCP connection to the server and sends it the contents
@@ -30,9 +36,3 @@ Command line arguments:
     • argv[2]: server’s port (assume a 16-bit unsigned integer).
     • argv[3]: path of the file to send.
 
-
-Server specification
--
-
-Command line arguments:
-    • argv[1]: server’s port (assume a 16-bit unsigned integer).
